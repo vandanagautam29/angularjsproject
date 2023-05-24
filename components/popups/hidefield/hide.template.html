@@ -1,0 +1,18 @@
+<div class="forHideFields">
+    <input type="search" ng-model="searchText" placeholder="Find a field" />
+    <div class="divider"></div>
+    <ul class="pl-6">
+        <li ng-repeat="item in value.headers | filter:searchText">
+            <span class="material-symbols-outlined fs-25" ng-click="show(item.show, item.key)"
+                ng-class="{'active': item.show}">
+                {{ item.show ? 'toggle_on' : 'toggle_off' }}
+            </span>
+            <span class="material-symbols-outlined fs-15">expand_circle_down</span>
+            <span>{{ item.name }}</span>
+        </li>
+    </ul>
+    <div class="btn d-flex justify-content-center g-40">
+        <button ng-click="showAll(false)">Hide All</button>
+        <button ng-click="showAll(true)">Show All</button>
+    </div>
+</div>

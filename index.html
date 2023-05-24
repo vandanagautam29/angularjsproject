@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <script src="script/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="./components/tabs/tabs.component.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/table.js"></script>
+    <script src="./components/popups/sort/sort.component.js"></script>
+   
+
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+    <link rel="stylesheet" type="text/css" href="style/common.css">
+    <link rel="stylesheet" type="text/css" href="style/right.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+
+<body class="app-container cyan-base border-cyan showViewControls" ng-controller="MenuController">
+    <div id="appsubContainer">
+        <div id="tableContainer" class="tableHeight">
+            <div id="firstContainer" style="width: 100%;">
+                <tabs tab="tab"></tabs>
+                <div id="table" class="readonly" style="display: flex;">
+                    <div id="viewBar" role="region" aria-label="View configuration"
+                        class="viewBarContainer baymax flex flex-none">
+                        <div class="viewSwitcherContainer flex-none flex items-center">
+                            <div class="height-full flex items-center pl1-and-half"
+                                data-testid="View sidebar toggle hover zone">
+                                <div class="d-flex align-item-center g-4 menuView">
+                                    <span class="material-symbols-outlined fs-15">menu</span>
+                                    <span>Views</span>
+                                </div>
+
+                                <!-- end view over -->
+                                <div class="darken3 ml-half mr1-and-half" style="height: 16px; width: 1px;"></div>
+                                <div class="d-flex flex-row align-item-center g-4 show-dailog all-stories"
+                                    ng-click="allStories()">
+                                    <span class="material-symbols-outlined fs-20"
+                                        style="color: rgb(22, 110, 225);">table_chart</span>
+                                    <span>All {{tabName()}}</span>
+                                    <span class="material-symbols-outlined fs-20">groups</span>
+                                    <span class="material-symbols-outlined fs-20">expand_more</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="viewConfigContainer d-flex flex-row g-40 ml-24"
+                            data-tutorial-selector-id="viewConfigContainer">
+                            <div class="d-flex flex-row align-item-center g-4 show-dailog">
+                                <span class="material-symbols-outlined fs-15">visibility_off</span>
+                                <span>Hide fields</span>
+                                <hide-field ng-show="showHideTemplate" value="value"></hide-field>
+                              </div>                                                          
+                            <div class="d-flex flex-row align-item-center g-4 show-dailog">
+                                <span class="material-symbols-outlined fs-15">filter_list</span>
+                                <span>Filter</span>
+                            </div>
+                            <div class="d-flex flex-row align-item-center g-4 show-dailog">
+                                <span class="material-symbols-outlined fs-15">subtitles</span>
+                                <span>Groups</span>
+                            </div>
+                            <div class="d-flex flex-row align-item-center g-4 show-dailog expanded-row" ng-click="openSortPopup()">
+                                <span class="material-symbols-outlined fs-15">swap_vert</span>
+                                <span>Sort</span>
+                            </div>
+                        </div>
+                        <div id="searchButton" class="d-flex align-item-center ml-24">
+                            <span class="material-symbols-outlined fs-15">search</span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-row">
+                        <div class="viewNavBar br">
+                            <div class="d-flex flex-row align-item-center mt-8 bb p-8">
+                                <span class="material-symbols-outlined fs-15">search</span>
+                                <input type="search" placeholder="Find a view" style="width: 13rem; border: none;" />
+                            </div>
+                            <div class="">
+                                <ul>
+                                    <li>
+                                        <span class="material-symbols-outlined fs-20"
+                                            style="color: rgb(22, 110, 225);">table_chart</span>
+                                        <span>All stories</span>
+                                    </li>
+                                    <li>
+                                        <span class="material-symbols-outlined fs-20"
+                                            style="color: rgb(22, 110, 225);">table_chart</span>
+                                        <span>Open stories</span>
+                                    </li>
+                                    <li>
+                                        <span class="material-symbols-outlined fs-20"
+                                            style="color: rgb(22, 110, 225);">table_chart</span>
+                                        <span>Ferrari</span>
+                                    </li>
+                                    <li>
+                                        <span class="material-symbols-outlined fs-20"
+                                            style="color: rgb(22, 110, 225);">table_chart</span>
+                                        <span>Gremlin</span>
+                                    </li>
+                                    <li>
+                                        <span class="material-symbols-outlined fs-20"
+                                            style="color: rgb(22, 110, 225);">table_chart</span>
+                                        <span>content to review</span>
+                                    </li>
+                                    <li>
+                                        <span class="material-symbols-outlined fs-20"
+                                            style="color: rgb(22, 110, 225);">table_chart</span>
+                                        <span>Add story</span>
+                                    </li>
+                                    <li>
+                                        <span class="material-symbols-outlined fs-20"
+                                            style="color: rgb(22, 110, 225);">table_chart</span>
+                                        <span>Complete stories</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="viewContainer" class="overflow-auto relative" style="height: 32rem;">
+                            <div class="showEditableMenu" ng-style="{ 'margin-left': toolbarStyle.marginLeft }">
+                                <div class="editContainer">
+                                    <div class="forAllStories">
+                                        <ul>
+                                            <li ng-click="downloadCsv()">
+                                                <span class="material-symbols-outlined fs-15">
+                                                    download_for_offline
+                                                </span>
+                                                Download CSV
+                                            </li>
+                                            <li>
+                                                <span class="material-symbols-outlined fs-15">
+                                                    print
+                                                </span>
+                                                Print view
+                                            </li>
+                                        </ul>
+                                    </div>
+                                   <!-- hide fields toggle button  -->
+                               <div class="forHideFields">
+                                    <input type="search" ng-model="searchText" placeholder="Find a field" />
+                                    <div class="divider"></div>
+                                    <ul class="pl-6">
+                                        <li ng-repeat="item in value.headers | filter:searchText">
+                                            <span class="material-symbols-outlined fs-25"
+                                                ng-click="item.show = !item.show" ng-class="{'active': item.show}">
+                                                {{ item.show ? 'toggle_on' : 'toggle_off' }}
+                                            </span>
+                                            <span class="material-symbols-outlined fs-15">expand_circle_down</span>
+                                            <span>{{ item.name }}</span>
+                                        </li>
+                                    </ul>
+                                    <div class="btn d-flex justify-content-center g-40">
+                                        <button ng-click="showAll(false)">Hide All</button>
+                                        <button ng-click="showAll(true)">Show All</button>
+                                    </div>
+                                </div>
+
+
+                                <!-- <hide-field ng-show="showHideTemplate"></hide-field> -->
+
+                                <!-- hide fields toggle button end -->
+                                    <div class="forFilter">
+                                        <div>In this view, show records</div>
+                                        <div class="d-flex flex-row align-item-center">
+                                            <div>Where</div>
+                                            <div class="filterCondition">
+                                                <select name="Story name" id="">
+                                                    <option ng-repeat="item in value.headers" value="item.key">
+                                                        {{item.name}}</option>
+                                                </select>
+                                                <select name="Story name" id="">
+                                                    <option value="">is..</option>
+                                                    <option value="">is not</option>
+                                                    <option value="">empty</option>
+                                                    <option value="">equal</option>
+                                                </select>
+                                                <input type="text" placeholder="Enter a value">
+                                                <span class="material-symbols-outlined">delete</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row">
+                                            <div>+ Add Condition</div>
+                                            <div>+ Add Condition group</div>
+                                        </div>
+                                    </div>
+                                   
+                                    <div class="forGroups">
+                                        <div class="d-flex flex-row g-170">
+                                            <div>Group by</div>
+                                            <div class="">
+                                                <span class="mr-16">Collapse all</span>
+                                                <span>Expand all</span>
+                                            </div>
+                                        </div>
+                                        <div class="divider"></div>
+                                        <div class="d-flex flex-row align-item-center g-4 mt-8 mb-8">
+                                            <select name="" id="" class="selection">
+                                                <option ng-repeat="item in value.headers" value="item.key">{{item.name}}
+                                                </option>
+                                            </select>
+                                            <select name="" id="" class="selection">
+                                                <option value="">First -> Last</option>
+                                                <option value="">Last -> First</option>
+                                            </select>
+                                            <span class="material-symbols-outlined fs-15">
+                                                visibility_off
+                                            </span>
+                                            <span class="material-symbols-outlined fs-15">
+                                                close
+                                            </span>
+                                        </div>
+                                    </div>
+                                   
+                                      <!-- sorting popup -->
+                                      <sort-template ng-show="showSortTemplate"></sort-template>
+                                      <!-- <div class="sortings">
+                                        <div id="sortings__field" ng-show="!showSortTemplate">
+                                            <input type="search" ng-model="searchText" placeholder="Find a field" />
+                                            <div class="divider"></div>
+                                            <ul class="pl-6">
+                                                <li ng-repeat="item in value.headers | filter:searchText">
+                                                    <span
+                                                        class="material-symbols-outlined fs-15">expand_circle_down</span>
+                                                    <span ng-click="toggleSortTemplate(item)">{{ item.name }}</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div data-testid="view-config-sort" ng-show="showSortTemplate">
+                                            <div style="min-width: 280px;">
+                                                <div class="p1-and-half">
+                                                    <div class="flex justify-between mx1 items-center">
+                                                        <div class="flex items-center">
+                                                            <p
+                                                                class="text-size-default text-color-quiet line-height-4 font-family-default font-weight-strong">
+                                                                Sort by</p>
+                                                        </div>
+                                                        <div></div>
+                                                    </div>
+                                                    <div class="hsection bg-light-gray-3 mx1 my1"></div>
+                                                    <div class="overflow-auto light-scrollbar"
+                                                        style="min-height: 70px; max-height: calc(100vh - 380px);">
+                                                        <ul class="pt1 flex flex-auto flex-column">
+                                                            <div class="pb1" style="opacity: 1;">
+                                                                <div
+                                                                    class="mx1 relative rounded flex justify-start bg-white">
+                                                                    <div class="mr1-and-half" style="width: 172px;">
+                                                                        <div class="flex flex-auto">
+                                                                            <div class="flex flex-auto relative baymax">
+                                                                                <div data-testid="autocomplete-button"
+                                                                                    class="flex items-center px1 rounded text-blue-focus pointer link-quiet darken1-hover width-full border border-darken2 pointer"
+                                                                                    role="button" aria-expanded="false"
+                                                                                    tabindex="0" style="height: 28px;">
+                                                                                    <select ng-model="selectedHeader"
+                                                                                        ng-options="header.key as header.name for header in value.headers">
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="mr1-and-half flex"
+                                                                        style="width: 100px; height: 28px;">
+                                                                        <div
+                                                                            class="flex flex-auto items-stretch selectMenu">
+                                                                            <span
+                                                                                class="flex flex-auto truncate left-align pointer focus-container selectMenuButton pointer"
+                                                                                role="button" aria-haspopup="true"
+                                                                                aria-expanded="false" tabindex="0">
+                                                                                <div class="flex flex-auto items-center px1 rounded text-blue-focus pointer link-quiet darken1-hover border border-darken2"
+                                                                                    data-testid="sort-direction-selector">
+                                                                                    <div ng-if="selectedHeader">
+                                                                                        <span
+                                                                                            ng-if="getDataType(selectedHeader, 'string')"
+                                                                                            ng-click="sortData(selectedHeader, 'asc')">A
+                                                                                            -> Z</span>
+                                                                                        <span
+                                                                                            ng-if="getDataType(selectedHeader, 'string')"
+                                                                                            ng-click="sortData(selectedHeader, 'desc')">Z
+                                                                                            ->
+                                                                                            A</span>
+                                                                                        <span
+                                                                                            ng-if="getDataType(selectedHeader, 'number')"
+                                                                                            ng-click="sortData(selectedHeader, 'first-last')">First
+                                                                                            -> Last</span>
+                                                                                        <span
+                                                                                            ng-if="getDataType(selectedHeader, 'number')"
+                                                                                            ng-click="sortData(selectedHeader, 'last-first')">Last
+                                                                                            -> First</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </span></div>
+                                                                    </div>
+                                                                    <span class="material-symbols-outlined fs-15" ng-click="toggleSortTemplate(null)">close</span>
+                                                                </div>
+                                                            </div>
+                                    
+                                                            <div id="DndLiveRegion-8" role="status"
+                                                                aria-live="assertive" aria-atomic="true"
+                                                                style="position: absolute; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(100%); white-space: nowrap;">
+                                                            </div>
+                                                        </ul>
+                                                        <div>
+                                                            <div class="flex flex-auto">
+                                                                <div class="flex flex-auto relative baymax">
+                                                                    <div data-testid="autocomplete-button"
+                                                                        class="flex quiet items-center strong link-unquiet-focusable pointer pointer"
+                                                                        role="button" aria-expanded="false" tabindex="0"
+                                                                        style="height: 32px;">
+                                                                        <div class="truncate flex-auto right-align">
+                                                                            <div class="flex items-center ml1">
+                                                                                <span
+                                                                                    class="material-symbols-outlined fs-15"
+                                                                                    ng-click="toggleSortTemplate(null)">add</span>
+                                                                                <p
+                                                                                    class="text-size-default text-color-default line-height-4 font-family-default font-weight-default">
+                                                                                    Add another sort</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                       </div> -->
+                                
+                                      <!-- sorting-end -->
+
+
+
+                                </div>
+                            </div>
+                            <div>
+                                <div class="paneContainer isHorizontallyScrolled">
+                                    <table-directive data="value.data" headers="value.headers"></table-directive>
+                                    <div class="stickyRowContainer"></div>
+                                    <div class="summaryBarContainer"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="thirdContainer">
+
+                </div>
+            </div>
+        </div>
+
+        <script src="script/script.js"></script>
+</body>
+
+</html>

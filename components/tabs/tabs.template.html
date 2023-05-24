@@ -1,0 +1,120 @@
+<div id="appTabsContainer" class="relative hide-print">
+    <div class="flex baymax AppTabsBar css-502mzd"
+        style="transition: width 300ms ease-in-out 0s; height: 32px;">
+        <div class="flex flex-auto relative"
+            style="clip-path: inset(-3px 0px 0px); background-color: rgba(11, 118, 183, 0.1);">
+            <div class="absolute all-0 pl1-and-half">
+                <div class="flex flex-auto scrollbar-hidden overflow-auto pt-half mtn-half pl-half mln-half"
+                    data-tutorial-selector-id="appControlsTablesTabsContainer">
+                    <nav aria-label="Tables" class="flex flex-none" id="appControlsTablesTabs"
+                        data-tutorial-selector-id="appControlsTablesTabs">
+                        <div class="flex tab" ng-click="$ctrl.setActiveTab(1)"
+                            style="height: 32px;">
+                            <div class="flex relative flex-none text-size-default tableTabContainer lightBase activeTab"
+                            ng-class="{ active: $ctrl.isSet(1)}"  id="tableTab-tbstroy">
+                                <div class="rounded-top flex flex-auto relative tab tableTab flex-none pointer"
+                                    ng-class="{'strong white': $ctrl.isSet(1)}" data-tableid="tbstroy" data-tutorial-selector-id="tableTab-stories">
+                                    <div>
+                                        <a class="height-full flex flex-auto items-center max-width-2 no-user-select focus-visible pl1-and-half"
+                                            href=""
+                                            style="padding-right: 12px; outline-offset: -5px; color: inherit;">
+                                            <span class="truncate">Stories</span></a>
+                                        <div class="absolute bottom-0 flex items-center no-user-select"
+                                            style="right: 12px; top: 0px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex tab" ng-click="$ctrl.setActiveTab(2)"
+                            style="height: 32px;">
+                            <div class="flex relative flex-none text-size-default tableTabContainer lightBase"
+                            ng-class="{ active: $ctrl.isSet(2)}" id="tableTab-tbepics">
+                                <div class="rounded-top flex flex-auto relative tab tableTab flex-none pointer top-bar-text-dark"
+                                ng-class="{'strong white': $ctrl.isSet(2)}"  data-tableid="tbepics" data-tutorial-selector-id="tableTab-epics">
+                                    <div><a class="height-full flex flex-auto items-center max-width-2 no-user-select focus-visible pl1-and-half"
+                                            style="padding-right: 12px; outline-offset: -5px; color: inherit;"><span
+                                                class="truncate">Epics</span></a>
+                                        <div class="absolute bottom-0 flex items-center no-user-select"
+                                            style="right: 12px; top: 0px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="css-baufhl"></div>
+                        </div>
+                        <div class="flex" ng-click="$ctrl.setActiveTab(3)"
+                            style="height: 32px;">
+                            <div class="flex relative flex-none text-size-default tableTabContainer lightBase"
+                            ng-class="{ active: $ctrl.isSet(3)}"  id="tableTab-tbsprints">
+                                <div class="rounded-top flex flex-auto relative tab tableTab flex-none pointer top-bar-text-dark"
+                                ng-class="{'strong white': $ctrl.isSet(3)}" data-tableid="tbsprints"
+                                    data-tutorial-selector-id="tableTab-sprints">
+                                    <div><a class="height-full flex flex-auto items-center max-width-2  no-user-select focus-visible pl1-and-half"
+                                            href=""
+                                            style="padding-right: 12px; outline-offset: -5px; color: inherit;"><span
+                                                class="truncate">Sprints</span></a>
+                                        <div class="absolute bottom-0 flex items-center no-user-select"
+                                            style="right: 12px; top: 0px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="css-baufhl"></div>
+                        </div>
+                        <div class="flex" g-class="{ active: $ctrl.isSet(4)}" ng-click="$ctrl.setActiveTab(4)"
+                            style="height: 32px;">
+                            <div class="flex relative flex-none text-size-default tableTabContainer lightBase"
+                            ng-class="{ active: $ctrl.isSet(4)}" id="tableTab-tbmilestone">
+                                <div class="rounded-top flex flex-auto relative tab tableTab flex-none pointer top-bar-text-dark"
+                                ng-class="{'strong white': $ctrl.isSet(4)}"
+                                    data-tableid="tbmilestone"
+                                    data-tutorial-selector-id="tableTab-releaseMilestones">
+                                    <div><a class="height-full flex flex-auto items-center max-width-2 no-user-select focus-visible pl1-and-half"
+                                            href=""
+                                            style="padding-right: 12px; outline-offset: -5px; color: inherit;"><span
+                                                class="truncate">Release milestones</span></a>
+                                        <div class="absolute bottom-0 flex items-center no-user-select"
+                                            style="right: 12px; top: 0px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="css-baufhl"></div>
+                        </div>
+                        <div class="flex" ng-class="{ active: $ctrl.isSet(5)}" ng-click="$ctrl.setActiveTab(5)"
+                            style="height: 32px;">
+                            <div class="flex relative flex-none text-size-default tableTabContainer lightBase"
+                            ng-class="{ active: $ctrl.isSet(5)}"
+                                id="tableTab-tbfacets">
+                                <div class="rounded-top flex flex-auto relative tab tableTab flex-none pointer top-bar-text-dark"
+                                ng-class="{'strong white': $ctrl.isSet(5)}"
+                                    data-tableid="tbfacets" data-tutorial-selector-id="tableTab-facets">
+                                    <div><a class="height-full flex flex-auto items-center max-width-2 no-user-select focus-visible pl1-and-half"
+                                            href=""
+                                            style="padding-right: 12px; outline-offset: -5px; color: inherit;"><span
+                                                class="truncate">Facets</span></a>
+                                        <div class="absolute bottom-0 flex items-center no-user-select"
+                                            style="right: 12px; top: 0px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="css-baufhl invisible"></div>
+                        </div>
+                    </nav>
+
+                    <div class="flex">
+                        <div tabindex="0" role="button" aria-label="Search all tables"
+                            class="pointer flex flex-none justify-center items-center focus-visible-opaque focus-container px1-and-half top-bar-text-dark top-bar-text-dark-hover"
+                            style="height: 32px;"><svg width="16" height="16" viewBox="0 0 16 16"
+                                class="parent-focus-visible"
+                                style="shape-rendering: geometricprecision;">
+                                <path fill-rule="nonzero" fill="currentColor"
+                                    d="M3.64645 5.64645C3.84171 5.45118 4.15829 5.45118 4.35355 5.64645L8 9.29289L11.6464 5.64645C11.8417 5.45118 12.1583 5.45118 12.3536 5.64645C12.5488 5.84171 12.5488 6.15829 12.3536 6.35355L8.35355 10.3536C8.15829 10.5488 7.84171 10.5488 7.64645 10.3536L3.64645 6.35355C3.45118 6.15829 3.45118 5.84171 3.64645 5.64645Z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="px1 rounded-big-top-right" style="background-color: rgba(11, 118, 183, 0.1);">
+        </div>
+    </div>
+</div>

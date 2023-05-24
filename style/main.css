@@ -1,0 +1,1242 @@
+:root {
+  --mainNavWidth: 702px;
+  --mainNavHeight: 79px;
+}
+
+.border-cyan {
+  border-color: #5fd3fc;
+}
+.cyan-base, .cyanBase, .cyan-base:focus, .cyan-base-focus-within:focus-within, .hover-container:hover .parent-hover-cyan-base {
+  background-color: #5fd3fc;
+}
+body {
+  line-height: 18px;
+  font-size: 13px;
+  color: hsl(0,0%,30%);
+}
+
+
+
+/* div2 */
+#appsubContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  border-color: inherit;
+}
+.publiclyShared #topbar {
+  border-bottom: none;
+}
+#topbar {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  z-index: 999;
+  overflow: visible;
+  user-select: none;
+}
+.items-center {
+  -webkit-box-align: center;
+  align-items: center;
+}
+.flex {
+  display: flex;
+}
+.baymax {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+.px2 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.justify-between {
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+.items-center {
+  /* -webkit-box-align: center; */
+  align-items: center;
+}
+.flex-auto {
+  -webkit-box-flex: 1;
+  flex: 1 1 auto;
+  min-width: 0px;
+  min-height: 0px;
+}
+.flex {
+  display: flex;
+}
+.baymax * {
+  box-sizing: border-box;
+}
+.max-width-1 {
+  max-width: 24rem;
+}
+.justify-center {
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.flex-inline {
+  display: inline-flex;
+}
+.heading-size-default {
+  font-size: 21px;
+}
+.mr1 {
+  margin-right: 0.5rem;
+}
+.icon-beaker::before {
+  content: "";
+}
+.truncate {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.line-height-4 {
+  line-height: 1.5;
+}
+.font-weight-strong, .bold, .strong {
+  font-weight: 500;
+}
+.css-778yg1 {
+  height: 28px;
+  width: 28px;
+}
+.cursor-pointer, .pointer {
+  cursor: pointer;
+}
+.mx2 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.baymax a:not(.underline) {
+  text-decoration: none;
+}
+.baymax a {
+  color: rgb(46, 47, 50);
+}
+.baymax a {
+  outline: 0px;
+}
+
+.css-1xr9pvw {
+  height: 28px;
+}
+.pill {
+  border-radius: 9999px;
+}
+.cursor-pointer, .pointer {
+  cursor: pointer;
+}
+.items-center {
+  -webkit-box-align: center;
+  align-items: center;
+}
+.flex {
+  display: flex;
+}
+.baymax * {
+  box-sizing: border-box;
+}
+.px1-and-half {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+.nowrap {
+  white-space: nowrap;
+}
+.no-user-select {
+  user-select: none;
+}
+.baymax * {
+  box-sizing: border-box;
+}
+.ml-half {
+  margin-left: 0.25rem;
+}
+.items-center {
+  -webkit-box-align: center;
+  align-items: center;
+}
+.flex-none {
+  -webkit-box-flex: 0;
+  flex: 0 0 auto;
+}
+.flex {
+  display: flex;
+}
+.baymax * {
+  box-sizing: border-box;
+}
+a:not(.underline) {
+  text-decoration: none;
+}
+.baymax a {
+  color: rgb(46, 47, 50);
+}
+.baymax a {
+  outline: 0px;
+}
+.fit {
+  max-width: 100%;
+}
+.flex {
+  display: flex;
+}
+
+
+/* div3 - app-table */
+
+.publiclyShared:not(.embedded) #tableContainer {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+#tableContainer.tableHeight {
+  height: calc(100% - 56px);
+  margin-top: 2px;
+}
+#tableContainer {
+  display: flex;
+}
+.publiclyShared:not(.embedded) #firstContainer {
+  margin-bottom: 12px;
+}
+#firstContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.relative {
+  position: relative;
+}
+.publiclyShared:not(.publicSharedView):not(.embedded) .tableHeight .AppTabsBar, .publiclyShared.publicSharedView:not(.embedded) .tableHeight .viewBarContainer {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+/* tableHeight - v2TopBarHeight  
+v2AppControlsBar - AppTabsBar
+tableContainer   - #appControlsContainer
+*/
+.css-502mzd::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.all-0 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.absolute {
+  position: absolute;
+}
+.baymax * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.pl1-and-half {
+  padding-left: 0.75rem;
+}
+.overflow-auto {
+  overflow: auto;
+}
+.flex-auto {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+}
+.flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.baymax * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.mtn-half {
+  margin-top: -0.25rem;
+}
+.mln-half {
+  margin-left: -0.25rem;
+}
+.mtn-half {
+  margin-top: -0.25rem;
+}
+.pl-half {
+  padding-left: 0.25rem;
+}
+.pt-half {
+  padding-top: 0.25rem;
+}
+#tableContainer .AppTabsBar .tableTabContainer.activeTab:not(.draggingTab):not(.embeddedMobileTab) {
+  z-index: 1;
+}
+.relative {
+  position: relative;
+}
+
+.flex-none {
+  -webkit-box-flex: 0;
+  flex: 0 0 auto;
+}
+.flex {
+  display: flex;
+}
+.baymax * {
+  box-sizing: border-box;
+}
+.text-size-default {
+  font-size: 13px;
+}
+#tableContainer .AppTabsBar .tableTabContainer.activeTab:not(.draggingTab):not(.embeddedMobileTab)::before 
+{
+  left: -3px;
+  /* background-image: url(data:image/svg+xml;charset=UTF-8,%3csvg width='3' height='3' viewBox='0 0 3 3' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M3 0C3 1.65686 1.65674 3 0 3H3V0Z' fill='white'/%3e%3c/svg%3e); */
+}
+#tableContainer .AppTabsBar .tableTabContainer.activeTab:not(.draggingTab):not(.embeddedMobileTab)::before, 
+#tableContainer .AppTabsBar .tableTabContainer.activeTab:not(.draggingTab):not(.embeddedMobileTab)::after {
+  content: "";
+  width: 3px;
+  height: 3px;
+  position: absolute;
+  bottom: 0px;
+}
+.text-size-default {
+  font-size: 13px;
+}
+
+.css-qbzq0r {
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 1px 1px;
+}
+.relative {
+  position: relative;
+}
+.cursor-pointer, .pointer {
+  cursor: pointer;
+}
+.flex-none {
+  -webkit-box-flex: 0;
+  flex: 0 0 auto;
+}
+.flex-auto {
+  -webkit-box-flex: 1;
+  flex: 1 1 auto;
+  min-width: 0px;
+  min-height: 0px;    
+}
+.flex {
+  display: flex;
+}
+.baymax * {
+  box-sizing: border-box;
+}
+.rounded-top {
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+.font-weight-strong, .bold, .strong {
+  font-weight: 500;
+}
+.white, .white-focus:focus, .white-hover:hover {
+  background-color: rgb(255, 255, 255);
+}
+.baymax a:not(.underline) {
+  text-decoration: none;
+}
+.baymax a {
+  color: rgb(46, 47, 50);
+}
+.baymax a {
+  outline: 0px;
+}
+.no-user-select {
+  user-select: none;
+}
+.max-width-2 {
+  max-width: 32rem;
+}
+.height-full {
+  height: 100%;
+}
+.truncate {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.no-user-select {
+  user-select: none;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+.absolute {
+  position: absolute;
+}
+
+#tableContainer .AppTabsBar .tableTabContainer.activeTab:not(.draggingTab):not(.embeddedMobileTab)::after {
+  right: -3px;
+ }
+
+#tableContainer .AppTabsBar .tableTabContainer.activeTab:not(.draggingTab):not(.embeddedMobileTab)::before, #tableContainer .AppTabsBar .tableTabContainer.activeTab:not(.draggingTab):not(.embeddedMobileTab)::after {
+  content: "";
+  width: 3px;
+  height: 3px;
+  position: absolute;
+  bottom: 0px;
+}
+.v2AppTopBar #topbar #appTopbar .top-bar-text-dark, .v2AppTopBar #topbar.shareTopbar .top-bar-text-dark, 
+#tableContainer .top-bar-text-dark, #secondPaneControlsContainer .top-bar-text-dark {
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.baymax a:not(.underline) {
+  text-decoration: none;
+}
+.baymax a {
+  color: rgb(46, 47, 50);
+}
+.baymax a {
+  outline: 0px;
+}
+.no-user-select {
+  user-select: none;
+}
+.max-width-2 {
+  max-width: 32rem;
+}
+.height-full {
+  height: 100%;
+}
+.no-user-select {
+  user-select: none;
+}
+.bottom-0 {
+  bottom: 0px;
+}
+.css-baufhl {
+  position: relative;
+}
+.css-baufhl::after {
+  content: "";
+  height: 12px;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  position: relative;
+  right: 0px;
+  top: 10px;
+}
+.invisible,.hover-container:hover .parent-hover-invisible
+{
+  opacity:0
+}
+#tableContainer .AppTabsBar:not(.dragInProgress) .tableTabContainer:not(.activeTab):not(.draggingTab):hover.lightBase .tableTab, #tableContainer .AppTabsBar:not(.dragInProgress) .tableTabContainer:not(.activeTab):not(.draggingTab).contextMenuOpen.lightBase .tableTab {
+  background-color: rgba(0, 0, 0, 0.08);
+  color: rgba(0, 0, 0, 0.95);
+}
+
+#tableContainer .AppTabsBar:not(.dragInProgress) .tableTabContainer:not(.activeTab):not(.draggingTab):hover::before, #tableContainer .AppTabsBar:not(.dragInProgress) .tableTabContainer:not(.activeTab):not(.draggingTab).contextMenuOpen::before {
+  left: -3px;
+}
+#tableContainer .AppTabsBar:not(.dragInProgress) .tableTabContainer:not(.activeTab):not(.draggingTab):hover::before, #tableContainer .AppTabsBar:not(.dragInProgress) .tableTabContainer:not(.activeTab):not(.draggingTab).contextMenuOpen::before, #tableContainer .AppTabsBar:not(.dragInProgress) .tableTabContainer:not(.activeTab):not(.draggingTab):hover:not(.clipRightEdge)::after, #tableContainer .AppTabsBar:not(.dragInProgress) .tableTabContainer:not(.activeTab):not(.draggingTab).contextMenuOpen:not(.clipRightEdge)::after {
+  content: "";
+  width: 3px;
+  height: 3px;
+  position: absolute;
+  bottom: 0px;
+}
+
+.px1 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.rounded-big-top-right {
+  border-top-right-radius: 6px;
+}
+.ml1 {
+  margin-left: 0.5rem;
+}
+.rounded-big-top-left {
+  border-top-left-radius: 6px;
+}
+
+/* table */
+
+.publiclyShared:not(.embedded) #firstContainer #table {
+  border-radius: 4px;
+  -webkit-box-flex: 1;
+  flex: 1 1 auto;
+  min-width: 0px;
+  min-height: 0px;
+}
+body.pageload-app #table {
+  display: flex;
+  flex-direction: column;
+}
+#table {
+  user-select: none;
+  -webkit-box-flex: 1;
+  flex: 1 1 auto;
+  min-width: 0px;
+  min-height: 0px;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin-right: 0px;
+  display: inline-block;
+  overflow: visible;
+  transform: none;
+  z-index: 1;
+  border-color: inherit;
+}
+#table .viewBarContainer {
+  height: 44px;
+  position: relative;
+  z-index: 7;
+  display: flex;
+  left: 0px;
+  right: 8px;
+  top: 0px;
+  font-size: inherit;
+  white-space: nowrap;
+  background: white;
+  transform: translateZ(0px);
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-weight: 400;
+  box-shadow: rgb(200, 200, 200) 0px 1px 0px 0px;
+}
+.flex-none {
+  -webkit-box-flex: 0;
+  flex: 0 0 auto;
+}
+.height-full {
+  height: 100%;
+}
+.relative {
+  position: relative;
+}
+
+.border-transparent {
+  border-color: transparent;
+}
+.border-thick {
+  border-style: solid;
+  border-width: 2px;
+}
+.text-dark, a.text-dark, .text-dark a {
+  color: rgb(46, 47, 50);
+  fill: rgb(46, 47, 50);
+}
+.mr1-and-half {
+  margin-right: 0.75rem;
+}
+
+.ml-half {
+  margin-left: 0.25rem;
+}
+.darken3, .darken3-focus:focus, .darken3-hover:hover, .darken3-active:active {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.text-size-large {
+  font-size: 15px;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.rounded {
+  border-radius: 3px;
+}
+.border-right {
+  border-right-style: solid;
+  border-right-width: 1px;
+}
+.flex-row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+}
+.cursor-pointer, .pointer {
+  cursor: pointer;
+}
+.animate-background-color {
+  transition: background-color 0.085s ease-in 0s;
+}
+/* search  */
+#table .viewBarContainer #searchButton {
+  padding-right: 1rem;
+}
+.quiet {
+  opacity: 0.75;
+}
+.noevents {
+  pointer-events: none;
+}
+
+
+/* table sub table */
+
+
+/* tableView- viewContainer */
+
+#table #tableView {
+  height: 100%;
+  background: rgb(245, 245, 245);
+  border-color: inherit;
+  display: flex;
+}
+.publiclyShared:not(.embedded) #tableView {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.relative {
+  position: relative;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.flex-auto {
+  -webkit-box-flex: 1;
+  flex: 1 1 auto;
+  min-width: 0px;
+  min-height: 0px;
+}
+.flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+}
+
+.flex {
+  display: flex;
+}
+.border-bottom {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+.border-gray-light1 {
+  border-color: rgb(196, 199, 205);
+}
+
+.publiclyShared:not(.embedded) #firstContainer #table #view {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  -webkit-box-flex: 1;
+  flex: 1 1 auto;
+  min-width: 0px;
+  min-height: 0px;
+}
+.groupLevel2.gridView {
+  background-color: rgb(237, 237, 237);
+}
+.gridView.grouped {
+  position: relative;
+}
+.baymax {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+.groupLevel2 {
+  background-color: rgb(247, 247, 247);
+}
+.gridView {
+  user-select: none;
+  border-color: inherit;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.gridView .paneContainer {
+  position: absolute;
+  font-size: 13px;
+  inset: 0px;
+  z-index: 4;
+  overflow: hidden;
+  opacity: 1;
+  border-color: inherit;
+}
+.gridView .paneContainer .scrollOverlay {
+  position: absolute;
+  inset: 32px 0px 0px;
+  z-index: 4;
+  pointer-events: none;
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out 0s;
+}
+.baymax * {
+  box-sizing: border-box;
+}
+.antiscroll-wrap {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+.antiscroll-inner {
+  overflow: scroll;
+}
+.gridView .paneContainer .scrollOverlay .antiscroll-scrollbar {
+  pointer-events: auto;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.28);
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px inset;
+}
+.baymax * {
+  box-sizing: border-box;
+}
+.antiscroll-scrollbar-horizontal {
+  height: 7px;
+  margin-left: 2px;
+  bottom: 2px;
+  left: 0px;
+}
+.antiscroll-scrollbar-shown {
+  opacity: 1;
+}
+.antiscroll-scrollbar {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 7px;
+  box-shadow: rgb(255, 255, 255) 0px 0px 1px;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 300ms linear 0s;
+}
+.gridView .paneContainer .scrollOverlay .antiscroll-scrollbar-vertical {
+  width: 10px;
+}
+.antiscroll-scrollbar-vertical {
+  width: 7px;
+  margin-top: 2px;
+  right: 2px;
+  top: 0px;
+}
+/* table header */
+
+.gridView.isShowingSummaryBar .paneContainer .headerAndDataRowContainer {
+  bottom: 34px;
+}
+.gridView .paneContainer .headerAndDataRowContainer {
+  position: absolute;
+  inset: 0px 0px 16px;
+  border-color: inherit;
+}
+
+.gridView .paneContainer .headerAndDataRowContainer .leftPaneWrapper {
+  border-right-style: solid;
+  z-index: 3;
+  box-shadow: transparent 4px 0px 0px 0px;
+  transition-property: border-color, box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+  border-width: 1px;
+  border-color: rgb(204, 204, 204) !important;
+}
+.gridView .paneContainer .leftPaneWrapper {
+  left: 0px;
+  overflow: visible;
+}
+.gridView .paneContainer .leftPaneWrapper, .gridView .paneContainer .rightPaneWrapper {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+}
+
+.gridView .paneContainer .pane.headerLeftPane {
+  height: 32px;
+  top: 0px;
+  z-index: 3;
+  overflow: visible;
+  background-color: rgb(242, 242, 242);
+}
+.gridView .paneContainer .pane {
+  position: absolute;
+  overflow: hidden;
+  left: 0px;
+  right: 0px;
+}
+.gridView .paneContainer .pane.headerLeftPane .paneInnerContent {
+  height: 32px;
+}
+.gridView .paneContainer .pane .paneInnerContent {
+  position: relative;
+}
+.gridView .headerRow {
+  top: 0px;
+  position: absolute;
+  left: 0px;
+  height: 32px;
+  z-index: 2;
+}
+.gridView.rowExpansionEnabled .headerRow .staticCellContainer {
+  width: 266px;
+}
+.gridView .headerRow .staticCellContainer {
+  position: absolute;
+  background-color: rgb(245, 245, 245);
+  border-bottom: 1px solid rgb(209, 209, 209);
+  left: -200px;
+  height: 32px;
+  width: 243px;
+}
+.gridView .headerRow .staticCellContainer .rowNumber {
+  margin-left: 200px;
+  width: 35px;
+  height: 32px;
+  cursor: default;
+  border-left: none;
+  border-right: none;
+  position: relative;
+}
+.gridView.rowSelectionEnabled .headerRow .staticCellContainer .rowNumber .checkbox {
+  display: flex;
+  width: 11px;
+  height: 11px;
+  top: 10px;
+  left: 11px;
+  border-radius: 2px;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(149, 160, 166);
+  position: absolute;
+}
+.gridView .headerRow .staticCellContainer .rowNumber .checkbox {
+  display: none;
+}
+.gridView.rowSelectionEnabled .headerRow .staticCellContainer .rowNumber .checkbox .icon {
+  opacity: 0;
+}
+
+/* table first column */
+.headerRow .cell.read.primary {
+  border-left: none;
+  padding-left: 1px;
+}
+.gridView .headerRow.leftPane > :last-child {
+  border-right: 1px solid rgb(204, 204, 204);
+}
+.headerRow .cell.read {
+  overflow: visible;
+}
+.headerRow .cell {
+  position: absolute;
+  top: 0px;
+  vertical-align: top;
+  display: inline-block;
+  background-color: rgb(245, 245, 245);
+  border-bottom: 1px solid rgb(209, 209, 209);
+  border-top: none;
+  border-left: 1px solid rgb(221, 225, 227);
+  padding-top: 1px;
+}
+.cell {
+  position: absolute;
+  font-size: 13px;
+  height: 32px;
+  padding: 0px;
+  margin: 0px;
+  vertical-align: top;
+  background: white;
+  color: rgb(17, 17, 17);
+  cursor: default;
+  outline: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.headerRow .cell.read.primary .contentWrapper {
+  cursor: default;
+}
+.headerRow .cell.read .contentWrapper {
+  box-sizing: border-box;
+  color: rgb(51, 51, 51);
+  position: relative;
+  font-family: inherit;
+  font-size: 13px;
+  width: 100%;
+  height: 100%;
+}
+.headerRow .cell.read .contentWrapper .nameAndDescription {
+  position: absolute;
+  left: 0px;
+  right: 22px;
+  top: 7px;
+  display: block;
+  height: 16px;
+  line-height: 16px;
+}
+body.publiclyShared .headerRow .cell.read .contentWrapper .nameAndDescription .name {
+  left: 7px;
+}
+.headerRow .cell.read.primary .contentWrapper .nameAndDescription .name {
+  left: 25px;
+}
+.headerRow .cell.read .contentWrapper .nameAndDescription .name {
+  position: absolute;
+  left: 26px;
+  right: 0px;
+  top: -2px;
+}
+.width-full {
+  width: 100%;
+}
+.justify-between {
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+.line-height-4 {
+  line-height: 1.5;
+}
+.font-weight-default {
+  font-weight: 400;
+}
+.text-size-default {
+  font-size: 13px;
+}
+.text-color-default {
+  color: rgb(51, 51, 51);
+}
+.headerRow .cell.read.gridHeaderCellPhosphorIcons .warningSign {
+  margin-right: 1.5rem;
+}
+
+.headerRow .cell.read .warningSign {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 14px;
+  padding: 8px 0px;
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 20px;
+  color: rgb(221, 44, 90);
+}
+.headerRow .cell.read.gridHeaderCellPhosphorIcons .menuButton {
+  opacity: 0.75;
+}
+.headerRow .cell.read .menuButton {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  padding: 0px 6px 0px 4px;
+  color: rgb(85, 85, 85);
+  text-align: center;
+  cursor: pointer;
+  opacity: 0.4;
+  transition: all 0.085s ease-in 0s;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.absolute {
+  position: absolute;
+}
+.headerRow .cell.read .resizeHandle {
+  position: absolute;
+  top: -1px;
+  right: -8px;
+  width: 16px;
+  height: 31px;
+  z-index: 2;
+  cursor: ew-resize;
+}
+.headerRow .cell.read .resizeHandle .draggingLine {
+  display: block;
+  position: absolute;
+  left: 7px;
+  top: 5px;
+  width: 3px;
+  border-radius: 2px;
+  height: 26px;
+  background-color: rgb(40, 114, 225);
+  opacity: 0;
+}
+/* table-first coulumn */
+.groupLevel2.gridView .paneContainer .pane.dataLeftPane {
+  background-color: rgb(242, 242, 242);
+}
+.gridView .paneContainer .pane.dataLeftPane {
+  top: 32px;
+  bottom: 0px;
+  z-index: 2;
+  background-color: rgb(249, 249, 249);
+}
+.gridView .paneContainer .pane .paneInnerContent {
+  position: relative;
+}
+.gridViewGroup.leftPane {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.groupLevel1.gridViewGroup {
+  background-color: rgb(247, 247, 247);
+}
+.baymax * {
+  box-sizing: border-box;
+}
+.gridViewGroup {
+  position: absolute;
+  left: 0px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px;
+  overflow: hidden;
+}
+.gridViewGroup .groupHeader {
+  height: 48px;
+}
+.gridViewGroup.groupLevel1.expanded .groupHeaderCell {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.gridViewGroup .groupHeaderCell.groupHeaderLabelCell {
+  overflow: hidden;
+}
+.gridViewGroup .groupHeaderCell {
+  background: inherit;
+  position: absolute;
+  height: 48px;
+}
+/* story want */
+.gridView .paneContainer .rightPaneWrapper {
+  right: 0px;
+  overflow: visible;
+}
+.gridView .paneContainer .leftPaneWrapper, .gridView .paneContainer .rightPaneWrapper {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+}
+.gridView .paneContainer .pane.headerRightPane {
+  height: 32px;
+  top: 0px;
+  z-index: 1;
+  overflow: visible;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgb(221, 225, 227);
+}
+.gridView .paneContainer .pane {
+  position: absolute;
+  overflow: hidden;
+  left: 0px;
+  right: 0px;
+}
+.gridView .paneContainer .pane.headerRightPane .paneInnerContent {
+  height: 32px;
+}
+.gridView .paneContainer .pane .paneInnerContent {
+  position: relative;
+}
+.headerRow .cell.ghost.notPermitted {
+  background: unset;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-image: initial;
+  border-left: 1px solid rgb(221, 225, 227);
+  cursor: unset;
+  pointer-events: none;
+}
+.headerRow .cell.ghost {
+  position: relative;
+  border-left: 1px solid rgb(221, 225, 227);
+  border-right: 1px solid rgb(221, 225, 227);
+  width: 94px;
+  height: 32px;
+  padding-top: 8px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+}
+.headerRow .cell {
+  position: absolute;
+  top: 0px;
+  vertical-align: top;
+  display: inline-block;
+  background-color: rgb(245, 245, 245);
+  border-bottom: 1px solid rgb(209, 209, 209);
+  border-top: none;
+  border-left: 1px solid rgb(221, 225, 227);
+  padding-top: 1px;
+}
+.headerRow .cell.ghost.notPermitted svg {
+  display: none;
+}
+.headerRow .cell.read .contentWrapper .nameAndDescription {
+  position: absolute;
+  left: 0px;
+  right: 22px;
+  top: 7px;
+  display: block;
+  /* vertical-align: top; */
+  height: 16px;
+  line-height: 16px;
+}
+body.publiclyShared .headerRow .cell.read .contentWrapper .nameAndDescription .name {
+  left: 7px;
+}
+.headerRow .cell.read .contentWrapper .nameAndDescription .name {
+  position: absolute;
+  left: 26px;
+  right: 0px;
+  top: -2px;
+}
+.headerRow .cell.read .resizeHandle {
+  position: absolute;
+  top: -1px;
+  right: -8px;
+  width: 16px;
+  height: 31px;
+  z-index: 2;
+  cursor: ew-resize;
+}
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  display: none;
+}
+
+.submenu-item {
+  background-color: #fff;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.submenu-item:hover {
+  background-color: #f2f2f2;
+}
+
+
+/* views sumbar */
+.noevents .events, .child-events>*, .events {
+  pointer-events: all;
+}
+.relative {
+  position: relative;
+}
+.overflowy-auto {
+  overflow-y: auto;
+}
+.height-full {
+  height: 100%;
+}
+.width-full {
+  width: 100%;
+}
+.flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+#table #viewContainer {
+  height: 100%;
+  background: #f5f5f5;
+  border-color: inherit;
+  display: flex;
+}
+
+.publiclyShared:not(.embedded) #viewContainer {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.relative {
+  position: relative;
+}
+.border-bottom {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+.items-center {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+}
+.flex-none {
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+}
+label {
+  color: inherit;
+  padding-top: 0;
+  width: auto;
+  text-align: left;
+  float: none;
+}
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+.flex-auto {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+}
+.quiet {
+  opacity: .75;
+}
+.p1 {
+  padding: 0.5rem;
+}
+.viewNavBar {
+  width: 0;
+  background: white;
+}
+
+ul {
+  list-style: none;
+}
+
+.block {
+  display: block !important;
+}
+.forHideFields .active{
+  color: forestgreen;
+}

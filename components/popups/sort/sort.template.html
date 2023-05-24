@@ -1,0 +1,114 @@
+<div class="sortings" ng-class="{ block: show }">
+    <div id="sortings__field" ng-show="!showSortTemplate" ng-class="{ block: show }">
+      <input type="search" ng-model="searchText" placeholder="Find a field" />
+      <div class="divider"></div>
+      <ul class="pl-6">
+            <li ng-repeat="item in value.headers | filter:searchText">
+                <span
+                    class="material-symbols-outlined fs-15">expand_circle_down</span>
+          <span>{{ item.name }}</span>
+        </li>
+      </ul>
+    </div>
+    <div data-testid="view-config-sort" ng-show="!showSortTemplate">
+      <div style="min-width: 280px;">
+        <div class="p1-and-half">
+          <div class="flex justify-between mx1 items-center">
+            <div class="flex items-center">
+                        <p
+                            class="text-size-default text-color-quiet line-height-4 font-family-default font-weight-strong">
+                            Sort by</p>
+            </div>
+                    <div></div>
+          </div>
+          <div class="hsection bg-light-gray-3 mx1 my1"></div>
+                <div class="overflow-auto light-scrollbar"
+                    style="min-height: 70px; max-height: calc(100vh - 380px);">
+            <ul class="pt1 flex flex-auto flex-column">
+              <div class="pb1" style="opacity: 1;">
+                            <div
+                                class="mx1 relative rounded flex justify-start bg-white">
+                  <div class="mr1-and-half" style="width: 172px;">
+                    <div class="flex flex-auto">
+                      <div class="flex flex-auto relative baymax">
+                                            <div data-testid="autocomplete-button"
+                                                class="flex items-center px1 rounded text-blue-focus pointer link-quiet darken1-hover width-full border border-darken2 pointer"
+                                                role="button" aria-expanded="false"
+                                                tabindex="0" style="height: 28px;">
+                                                <select ng-model="selectedHeader"
+                                                    ng-options="header.key as header.name for header in value.headers">
+                                                </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                                <div class="mr1-and-half flex"
+                                    style="width: 100px; height: 28px;">
+                                    <div
+                                        class="flex flex-auto items-stretch selectMenu">
+                                        <span
+                                            class="flex flex-auto truncate left-align pointer focus-container selectMenuButton pointer"
+                                            role="button" aria-haspopup="true"
+                                            aria-expanded="false" tabindex="0">
+                                            <div class="flex flex-auto items-center px1 rounded text-blue-focus pointer link-quiet darken1-hover border border-darken2"
+                                                data-testid="sort-direction-selector">
+                                                <div ng-if="selectedHeader">
+                                                    <span
+                                                        ng-if="getDataType(selectedHeader, 'string')"
+                                                        ng-click="sortData(selectedHeader, 'asc')">A
+                                                        -> Z</span>
+                                                    <span
+                                                        ng-if="getDataType(selectedHeader, 'string')"
+                                                        ng-click="sortData(selectedHeader, 'desc')">Z
+                                                        ->
+                                                        A</span>
+                                                    <span
+                                                        ng-if="getDataType(selectedHeader, 'number')"
+                                                        ng-click="sortData(selectedHeader, 'first-last')">First
+                                                        -> Last</span>
+                                                    <span
+                                                        ng-if="getDataType(selectedHeader, 'number')"
+                                                        ng-click="sortData(selectedHeader, 'last-first')">Last
+                                                        -> First</span>
+                        </div>
+                    </span>
+                  </div>
+                                        </span></div>
+                </div>
+                                <span class="material-symbols-outlined fs-15" ng-click="toggleSortTemplate(null)">close</span>
+              </div>
+            </div>
+
+                        <div id="DndLiveRegion-8" role="status"
+                            aria-live="assertive" aria-atomic="true"
+                            style="position: absolute; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(100%); white-space: nowrap;">
+                        </div>
+          </ul>
+          <div>
+            <div class="flex flex-auto">
+              <div class="flex flex-auto relative baymax">
+                                <div data-testid="autocomplete-button"
+                                    class="flex quiet items-center strong link-unquiet-focusable pointer pointer"
+                                    role="button" aria-expanded="false" tabindex="0"
+                                    style="height: 32px;">
+                  <div class="truncate flex-auto right-align">
+                    <div class="flex items-center ml1">
+                                            <span
+                                                class="material-symbols-outlined fs-15"
+                                                ng-click="toggleSortTemplate(null)">add</span>
+                                            <p
+                                                class="text-size-default text-color-default line-height-4 font-family-default font-weight-default">
+                                                Add another sort</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  

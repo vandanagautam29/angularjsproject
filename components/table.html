@@ -1,0 +1,18 @@
+<div class="headerAndDataRowContainer d-flex flex-row">
+    <div class="rightPaneWrapper">
+        <div class="headerRightPane pane">
+            <div class="rightHeaderPane">
+                <div class="rightHeaderData d-flex flex-row justify-content-between" ng-click="click()" ng-repeat="item in headers"
+                    ng-show="!item['show']">{{item.name}}
+                    <span class="material-symbols-outlined fs-20 columnFeatures">expand_more</span>
+                </div>
+            </div>
+        </div>
+        <sortpopup show="columnSort"></sortpopup>
+        <div class="rightBodyContainer expanded-row">
+            <div class="rightBodyPane" ng-repeat="item in data">
+                <div class="rightBodyData" ng-repeat="head in headers" ng-hide="head.show">{{item[head.key]}}</div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,378 @@
+.rightHeaderPane {
+    color: hsl(0,0%,20%);
+    font-size: 13px;
+    font-weight: 400;
+    font-family: system-ui;
+    display: flex;
+    flex-direction: row;
+}
+
+.rightHeaderPane .rightHeaderData {
+    width: 200px;
+    padding: 8px;
+    border-left: 1px solid hsl(0,0%,82%);
+    border-bottom: 1px solid hsl(0,0%,82%);
+}
+
+/* .rightBodyContainer {
+
+} */
+
+.rightBodyPane {
+    color: hsl(0,0%,20%);
+    font-size: 13px;
+    font-weight: 400;
+    font-family: system-ui;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+}
+
+.rightBodyPane-expend {
+    color: hsl(0,0%,20%);
+    font-size: 13px;
+    font-weight: 400;
+    font-family: system-ui;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+}
+
+.leftBodyPane {
+    background: white;
+    height: 49.3px;
+    border-bottom: 1px solid hsl(0,0%,82%);
+}
+
+.leftBodyData {
+    color: hsl(0,0%,20%);
+    font-size: 13px;
+    font-weight: 400;
+    font-family: system-ui;
+}
+
+.rightBodyData {
+    width: 200px;
+    padding: 8px;
+    border-left: 1px solid hsl(0,0%,82%);
+    background: white;
+    border-bottom: 1px solid hsl(0,0%,82%);
+}
+
+.rightBodyData-expend {
+    width: 200px;
+    padding: 8px;
+    border-left: 1px solid hsl(0,0%,82%);
+    background: white;
+    border-bottom: 1px solid hsl(0,0%,82%);
+    background: whitesmoke;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.justify-content-center {
+    justify-content: center
+}
+
+.align-item-center {
+    align-items: center;
+}
+
+.g-4 {
+    gap: 4px;
+}
+.g-40 {
+    gap: 40px;
+}
+.g-170 {
+    gap: 170px;
+}
+
+.g-16 {
+    gap: 16px;
+}
+
+.fs-20 {
+    font-size: 20px !important;
+}
+
+.fs-10 {
+    font-size: 10px !important;
+}
+
+.fs-15 {
+    font-size: 15px !important;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+.bg-sky-blue {
+    background: #e9eef9;
+}
+
+.b {
+    border: 1px solid hsl(0,0%,82%);
+}
+
+.bb {
+    border-bottom: 1px solid hsl(0,0%,82%);
+}
+
+.br {
+    border-right: 1px solid hsl(0,0%,82%);
+}
+.round-3 {
+    border-radius: 3px;
+}
+
+.p-8 {
+    padding: 8px;
+}
+
+.pl-0{
+    padding-left: 0;
+}
+.pt-8 {
+    padding-top: 8px;
+}
+
+.pb-8 {
+    padding-bottom: 8px;
+}
+.pl-6 {
+    padding-left: 6px;
+}
+
+.pr-6 {
+    padding-right: 6px;
+}
+
+.m-16 {
+    margin: 16px;
+}
+
+.m-12 {
+    margin: 12px;
+}
+
+.m-8 {
+    margin: 8px;
+}
+
+.ml-24 {
+    margin-left: 24px;
+}
+.ml-8 {
+    margin-left: 8px;
+}
+
+.ml-12 {
+    margin-left: 12px;
+}
+.mt-8 {
+    margin-top: 8px;
+}
+
+.mb-8 {
+    margin-bottom: 8px;
+}
+
+.mr-16 {
+    margin-right: 16px;
+}
+
+.hide-rightBodyPane {
+    display: none;
+}
+
+.headerEditMenu {
+    background: white;
+    width: 15rem;
+    height: 5rem;
+    border-radius: 4px;
+    overflow: auto;
+    border: 1px solid hsl(0,0%,82%);
+}
+
+.showEditableMenu {
+    z-index: 1;
+    border: 1px solid hsl(0,0%,82%);
+    background: white;
+    position: absolute;
+    border-radius: 6px;
+    display: none;
+    box-shadow: 0 0 1px rgba(0,0,0,0.24),
+                0 0 2px rgba(0,0,0,0.16),
+                0 3px 4px rgba(0,0,0,0.06),
+                0 6px 8px rgba(0,0,0,0.06),
+                0 12px 16px rgba(0,0,0,0.08),
+                0 18px 32px rgba(0,0,0,0.06);
+}
+
+.show-dailog {
+    cursor: pointer;
+}
+.all-stories {
+    cursor: pointer;
+}
+.all-stories:hover {
+    background: whitesmoke;
+    border-radius: 6px;
+}
+
+.viewConfigContainer div:hover {
+    background: whitesmoke;
+    margin: 8px 0 8px 0;
+    border-radius: 6px;
+}
+
+.forAllStories {
+    display: none;
+}
+.forAllStories li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 12px 0 12px 0;
+    gap: 8px;
+    font-family: system-ui;
+}
+
+.forHideFields {
+    display: none;
+}
+.forHideFields div:first-child {
+    border-top: 2px whitesmoke;
+}
+.forHideFields ul {
+    height: 6rem;
+    overflow-y: auto;
+}
+.forHideFields li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 12px 0 12px 0;
+    gap: 8px;
+    font-family: system-ui;
+}
+
+.forHideFields input {
+    margin: 8px 0 0 8px;
+    border: none;
+}
+
+.forHideFields .btn button{
+    border: none;
+    padding: 5px 35px;
+    border-radius: 2px;
+    margin-bottom: 4px;
+}
+.divider {
+    border-bottom: 1.3px solid #efefef;
+    margin: 11px 8px 0px 5px;
+}
+
+.forFilter {
+    font-family: system-ui;
+    display: none;
+}
+
+.forFilter div {
+    margin: 8px;
+}
+
+.forFilter .filterCondition{
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 2px;
+    display: flex;
+}
+
+.filterCondition .rightBorder {
+    border: none;
+    border-right: 1px solid rgba(0,0,0,0.1);
+    width: 6.5rem;
+    padding: 3px 6px;
+}
+
+.forGroups {
+    font-family: system-ui;
+    margin: 6px;
+    display: none;
+}
+
+.forGroups .selection {
+    border: none;
+    width: 8rem;
+    padding: 3px 6px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 2px;
+}
+.sortings {
+    display: none;
+    font-family: system-ui;
+}
+
+.sortings .selection {
+    border: none;
+    width: 8rem;
+    padding: 3px 6px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 2px;
+}
+
+.viewNavBar {
+    width: 0;
+}
+
+.viewNavBar ul {
+    padding-left: 8px;
+}
+
+.viewNavBar li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 12px 0 12px 0;
+    gap: 8px;
+    font-family: system-ui;
+    padding: 5px 8px;
+}
+
+.viewNavBar li:hover {
+    background: rgba(196, 236, 255, 0.7);
+    padding: 5px 8px;
+}
+
+.columnHeadFeture {
+    font-family: system-ui;
+    z-index: 1;
+    position: absolute;
+    background: white;
+    width: 15rem;
+    display: none;
+}
+
+.menuView, .columnFeatures {
+    cursor: pointer;
+}
